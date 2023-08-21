@@ -1,14 +1,13 @@
 # url_shortener
-To start app
+To start app on Linux
 ```
 go build ./cmd/main.go
-./cmd/cmd.exe
+./cmd/cmd
 ```
 or
 ```
 go run cmd/main.go
 ```
-or start file cmd.exe in cmd folder
 
 # POST localhost:8080/url
 Add short URL in redirecting list
