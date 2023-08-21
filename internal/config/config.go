@@ -16,7 +16,7 @@ type Config struct {
 }
 
 type HTTPServer struct {
-	Address     string        `yaml:"address" env-default:"localhost:8080"`
+	Address     string        `env:"ADDRESS" env-default:"0.0.0.0:8080"`
 	Timeout     time.Duration `yaml:"timeout" env-default:"4s"`
 	IdleTimeout time.Duration `yaml:"idle_timeout" env-default:"60s"`
 	// User        string        `yaml:"user" env-required:"true"`
@@ -25,7 +25,7 @@ type HTTPServer struct {
 
 func MustLoad() *Config {
 	if err := godotenv.Load(); err != nil {
-		log.Fatal("No .env file found")
+		log.Fatal("No .env file found ", err.Error())
 	}
 
 	configPath := os.Getenv("CONFIG_PATH")
