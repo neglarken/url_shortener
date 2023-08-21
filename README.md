@@ -1,12 +1,7 @@
 # url_shortener
-To start app on Linux
+To start app
 ```
-go build ./cmd/main.go
-./cmd/cmd
-```
-or
-```
-go run cmd/main.go
+docker-compose up
 ```
 
 # POST localhost:8080/url
